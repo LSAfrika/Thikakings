@@ -1,0 +1,24 @@
+.footer{
+    @apply w-full flex flex-col justify-start items-center min-h-[250px] bg-blue-600 gap-2
+}
+.logoname{
+    @apply flex justify-center items-center flex-col md:flex-row w-full pb-5 gap-2   md:gap-10
+}
+.teamlogo{
+    @apply block min-w-[125px] min-h-[125px] mt-5 bg-slate-100 rounded-full overflow-hidden bg-cover 
+}
+
+.teamname{
+    @apply text-2xl font-light text-white
+     w-full text-center md:w-fit md:text-4xl md:font-bold md:pt-5   
+}
+
+.socials{
+    @apply w-full bg-pink-600/0 flex flex-row justify-center items-center gap-5;
+    .social{
+        @apply min-w-[50px] min-h-[50px] bg-emerald-500/0 flex flex-col justify-start items-center text-white text-xs font-extrabold
+    }
+}
+.copyright{
+    @apply  w-full min-h-[50px] mt-auto mb-[10px] inline-block text-center text-white pt-3
+}

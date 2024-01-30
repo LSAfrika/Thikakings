@@ -1,0 +1,45 @@
+.contactus{
+    @apply min-h-screen w-full pb-5 bg-slate-100 flex flex-col overflow-hidden max-h-screen
+     justify-start items-center  pt-[70px] px-2 md:px-0 md:pt-0 md:pb-0
+      md:flex-row md:justify-start md:items-center;
+   // background-color: linear-gradient(red 0%, orange 10%, orange 30%, yellow 50%, yellow 70%, green 90%, green 100%);
+     position: relative !important;
+}
+
+.contactusform{
+    @apply max-w-[300px] w-full min-h-[300px] h-fit bg-white drop-shadow-lg md:max-w-[400px] md:min-h-[500px]
+    rounded-md
+    flex flex-col justify-start items-center gap-5 mx-auto  z-20;
+    position: relative !important;
+ }
+
+ p{
+    @apply p-1 font-bold text-blue-600 text-left w-full pl-3 text-lg
+ }
+ input{
+    @apply w-full max-w-[275px] bg-slate-50  border-[1px] border-blue-200 min-h-[40px] px-1 
+    active:outline-teal-600
+    
+ }
+
+ textarea{
+    @apply w-full max-w-[275px] min-h-[150px] bg-slate-50 p-1 border-blue-200  border-[1px]
+ }
+
+ .sendbtn{
+    @apply min-w-[150px] bg-blue-600 text-white font-semibold text-sm p-2 rounded-md mb-5
+ }
+
+ .split{
+   @apply min-w-[100%]  top-[-50px]  absolute  md:flex min-h-[100vh] overflow-hidden bg-slate-100  gap-3 flex-col justify-start items-stretch py-2;
+   .ballstrips{
+      @apply min-w-full min-h-[50px] bg-green-600/0 overflow-hidden text-xs font-bold text-blue-600/30 flex items-center justify-center
+      gap-5 text-nowrap;
+      div{
+         @apply text-nowrap whitespace-nowrap
+      }
+   }
+   .cascade{
+      @apply pr-[140px]
+   }
+ }

@@ -1,0 +1,36 @@
+
+.management::before{
+    @apply min-w-full bg-blue-600;
+    content: '';
+}
+.management{
+    @apply min-h-screen w-full pb-5 bg-blue-600 flex justify-start items-center flex-col pt-[50px] px-2 
+    md:flex-row md:flex-wrap md:justify-center gap-4 md:items-start mx-auto xl:px-[calc(100vw-90%)]
+}
+h1{@apply my-5 text-white font-bold text-lg block min-w-full  text-center
+
+}
+.member{
+    @apply relative w-full max-w-[300px] mt-[50px]
+      min-h-[150px] bg-slate-100 drop-shadow-md md:mt-[10px]
+    rounded-lg;
+
+    .avatar{
+        @apply w-[100px] h-[100px] rounded-full border-[10px]
+        border-blue-600 top-[-40px] absolute bg-white left-[5%]
+        translate-x-[-5%]
+    }
+    .title{
+        @apply min-w-full min-h-[50px] bg-slate-100 pl-[130px] 
+        text-slate-600 font-light text-base   rounded-lg pt-[10px];
+        span{
+            @apply text-lg text-blue-600 font-normal
+        }
+        
+    }
+    .statement{
+        @apply bg-red-400/0 pt-[20px] px-2 text-center text-ellipsis text-slate-800 font-light
+        text-[18px] italic
+    }
+
+}
