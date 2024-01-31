@@ -4,33 +4,70 @@
     content: '';
 }
 .management{
-    @apply min-h-screen w-full pb-5 bg-blue-600 flex justify-start items-center flex-col pt-[50px] px-2 
-    md:flex-row md:flex-wrap md:justify-center gap-4 md:items-start mx-auto xl:px-[calc(100vw-90%)]
+    @apply min-h-screen w-full pb-5 bg-blue-600 flex justify-start items-center flex-col   max-h-fit relative
+    md:flex-row md:flex-wrap md:justify-center gap-4 md:items-start xl:px-[calc(100vw-90%)] overflow-hidden
 }
-h1{@apply my-5 text-white font-bold text-lg block min-w-full  text-center
+.titleholder{
+    @apply w-full block text-center z-30 relative bg-blue-600 xl:mb-5 xl:bg-transparent;
+    h1{@apply my-5 text-white font-bold text-lg  max-w-fit mx-auto   text-center z-20  px-6 py-3 md:text-3xl xl:bg-blue-600
+        xl:py-7
+    
+    }
+}
 
-}
+
 .member{
-    @apply relative w-full max-w-[300px] mt-[50px]
+    @apply relative z-20 w-full max-w-[300px] mt-[50px]
       min-h-[150px] bg-slate-100 drop-shadow-md md:mt-[10px]
-    rounded-lg;
+    rounded-lg  xl:min-w-[500px] xl:min-h-[250px];
 
     .avatar{
         @apply w-[100px] h-[100px] rounded-full border-[10px]
         border-blue-600 top-[-40px] absolute bg-white left-[5%]
         translate-x-[-5%]
+
+        xl:w-[150px] xl:h-[150px]
     }
     .title{
         @apply min-w-full min-h-[50px] bg-slate-100 pl-[130px] 
-        text-slate-600 font-light text-base   rounded-lg pt-[10px];
+        text-slate-600 font-light text-base   rounded-lg pt-[10px]
+        xl:pl-[200px] xl:text-2xl
+        ;
         span{
-            @apply text-lg text-blue-600 font-normal
+            @apply text-lg text-blue-600 font-normal xl:text-3xl
         }
         
     }
     .statement{
         @apply bg-red-400/0 pt-[20px] px-2 text-center text-ellipsis text-slate-800 font-light
-        text-[18px] italic
+        text-[18px] italic xl:pt-[50px] xl:text-2xl
     }
 
 }
+
+.split{
+    @apply min-w-[100%] max-w-[50%] top-[-50px]  absolute 
+     md:flex min-h-[100vh] overflow-hidden   gap-3 flex-col justify-start items-stretch py-2 
+     z-10
+      xl:bg-blue-600;
+    .ballstrips{
+       @apply min-w-full min-h-[50px] bg-green-600/0 overflow-hidden text-xs font-bold 
+        flex items-center justify-center
+       gap-5 text-nowrap
+    text-white/30
+       ;
+       div{
+          @apply text-nowrap whitespace-nowrap;
+          svg{
+             @apply fill-white/30
+          }
+       }
+ 
+    }
+    .cascade{
+       @apply pr-[140px]
+    }
+ 
+    .largeball{
+       @apply min-w-[300px] min-h-[300px] absolute top-[50%] translate-y-[-50%]  }
+  }

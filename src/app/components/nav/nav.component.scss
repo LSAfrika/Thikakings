@@ -1,0 +1,53 @@
+nav{
+    @apply top-0 fixed min-h-[50px] bg-blue-600 w-full z-50 flex justify-start items-center text-white font-semibold text-sm
+    px-2  drop-shadow-lg
+}
+
+svg{
+    @apply 
+    min-w-[40px] min-h-[40px] cursor-pointer ml-auto
+    md:hidden 
+}
+
+.navmenu{
+    @apply fixed z-[40] top-[50px] right-[-100%] bg-blue-600 min-w-[100vw] min-h-[calc(100vh-50px)]
+    flex justify-start pt-[50px] items-center flex-col px-2 
+     overflow-hidden;
+    div{
+        @apply min-h-[70px] min-w-full hover:bg-white/10 text-center text-2xl pt-[20px] font-light hover:font-normal cursor-pointer
+    }
+
+
+}
+.opennav{
+    animation: open .5s ease-in forwards    ;
+  
+}
+.closenav{
+    animation: close .5s ease-in forwards    ;
+  
+}
+
+ul{
+    @apply ml-auto md:flex justify-center items-center gap-4 mr-2 hidden ;
+    li{
+        @apply font-light text-lg hover:underline-offset-1 hover:underline hover:font-semibold cursor-pointer
+    }
+}
+
+
+@keyframes open {
+    0%{
+        @apply right-[-100%]
+    }
+    100%{@apply right-0 }
+    
+}
+
+@keyframes close {
+    0%{
+        @apply right-0
+    }
+    100%{@apply right-[-100%] }
+    
+}
