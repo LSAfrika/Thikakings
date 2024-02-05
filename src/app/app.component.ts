@@ -9,6 +9,7 @@ import { ContactusComponent } from './components/contactus/contactus.component';
 import { Location } from '@angular/common';
 import { NavigationService } from './services/navigation.service';
 import { Subject, takeUntil, tap } from 'rxjs';
+import { TeamComponent } from './routes/team/team.component';
 
 
 @Component({
@@ -21,6 +22,7 @@ import { Subject, takeUntil, tap } from 'rxjs';
             ManagementComponent,
             FooterComponent,
             ContactusComponent,
+            TeamComponent
 
           ],
   templateUrl: './app.component.html',
