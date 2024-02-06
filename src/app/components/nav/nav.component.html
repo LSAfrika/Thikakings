@@ -1,6 +1,6 @@
 <nav class="nav">
-    <span class="cursor-pointer" routerLink="/">Thika Kings FC</span>
-<svg (click)="openmobilemenu()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255 255 255);"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+    <span class="cursor-pointer" (click)="navigatehome()">Thika Kings FC</span>
+<svg *ngIf="navi.currentroute=='/'"  (click)="openmobilemenu()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255 255 255);"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
 
 <div class="navmenu " [ngClass]="{opennav: mobilemenustate==1,closenav:mobilemenustate==2}">
   
@@ -9,7 +9,7 @@
         <div (click)="navigate('team')">The Team</div>
         <div  (click)="navigate('management')">management</div>
         <div  (click)="navigate('contactus')">contact us</div>
-        <div  routerLink="/teamstats">Team news</div>
+        <div (click)="navigatetoteamnews()" >Team news</div>
 
  
 </div>
@@ -18,7 +18,7 @@
         <li (click)="navigationscroll('team')">The Team</li>
         <li (click)="navigationscroll('management')">management</li>
         <li (click)="navigationscroll('contactus')">Contact us</li>
-        <li class="teamnews" routerLink="/teamstats">Team News</li>
+        <li class="teamnews"  routerLink="/teamstats" >Team News</li>
 
         <!-- <li >Team news</li> -->
     </ul>

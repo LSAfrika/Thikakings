@@ -1,6 +1,6 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 
 @Injectable({
@@ -9,8 +9,10 @@ import { BehaviorSubject } from 'rxjs';
 export class NavigationService {
 
 
+  disablemobilemenu=false
+  currentroute='/'
   location=inject(Router)
-currentlocation= new BehaviorSubject<string>('hero')
+currentlocation= new Subject<string>()
 viewteam=signal(false)
 constructor() { 
 

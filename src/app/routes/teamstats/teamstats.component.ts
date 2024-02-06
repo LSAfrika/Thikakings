@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NavComponent } from '../../components/nav/nav.component';
+import { Router } from '@angular/router';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-teamstats',
@@ -9,5 +11,13 @@ import { NavComponent } from '../../components/nav/nav.component';
   styleUrl: './teamstats.component.scss'
 })
 export class TeamstatsComponent {
+
+  private router=inject(Router)
+  private navi=inject(NavigationService)
+
+  constructor(){
+    this.navi.currentroute=this.router.url
+
+  }
 
 }

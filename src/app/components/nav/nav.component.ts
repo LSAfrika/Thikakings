@@ -2,7 +2,7 @@ import { Component, Output, inject } from '@angular/core';
 import { EventEmitter } from 'stream';
 import { NavigationService } from '../../services/navigation.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -13,12 +13,23 @@ import { RouterModule } from '@angular/router';
 })
 export class NavComponent {
 
-  private navi=inject(NavigationService)
+  private router=inject(Router)
+   navi=inject(NavigationService)
   mobilemenustate=0
+
+constructor(){
+  console.log(this.navi.disablemobilemenu);
+  console.log(this.router.url);
+
+  if(this.router.url!='/') this.navi.disablemobilemenu=true
+  console.log(this.navi.disablemobilemenu);
+  
+}
 
 navigationscroll(location:string){
   this.navi.currentlocation.next(location)
 }
+
 
 openmobilemenu(){
   this.mobilemenustate=1
@@ -29,5 +40,24 @@ navigate(location:string){
   setTimeout(() => {
   this.mobilemenustate=0
   }, 1000);
+}
+
+navigatetoteamnews(){
+  console.log('navigation happening');
+  this.navi.currentroute=this.router.url
+  this.mobilemenustate=2
+this.router.navigateByUrl('/teamstats')
+  setTimeout(() => {
+  this.mobilemenustate=0
+  }, 1000);
+}
+
+navigatehome(){
+this.router.navigateByUrl('/')
+this.navi.currentroute='/'
+console.log(this.navi.currentroute);
+
+
+
 }
 }

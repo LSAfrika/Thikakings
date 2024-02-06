@@ -43,7 +43,7 @@ export class AppComponent {
 
   ngAfterViewInit(){
 
-    console.log('view inintiated',document);
+  
     
     this.navi.currentlocation.pipe(
       tap(location=>{this.scrolltocontent(location),console.log('current location: ',location)}),

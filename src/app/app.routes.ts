@@ -5,5 +5,5 @@ import { NotfoundComponent } from './routes/notfound/notfound.component';
 
 export const routes: Routes = [
     {path:'teamstats',component:TeamstatsComponent},
-    {path:'**',component:NotfoundComponent}
+    // {path:'**',component:NotfoundComponent}
 ];
