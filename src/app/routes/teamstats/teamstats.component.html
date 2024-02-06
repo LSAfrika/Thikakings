@@ -25,7 +25,7 @@
 </div>
 </div>
     <h1>Defenders</h1>
-    <div class="playerstat" *ngFor="let player of [].constructor(3)">
+    <div class="playerstat" *ngFor="let player of [].constructor(7)">
         <div class="avatar"></div>
         <div class="stats">
           <div class="stat">
@@ -40,7 +40,7 @@
 </div>
 </div>
     <h1>Midfielders</h1>
-    <div class="playerstat" *ngFor="let player of [].constructor(3)">
+    <div class="playerstat" *ngFor="let player of [].constructor(6)">
         <div class="avatar"></div>
         <div class="stats">
           <div class="stat">
@@ -55,7 +55,7 @@
 </div>
 </div>
     <h1>Attackers</h1>
-    <div class="playerstat" *ngFor="let player of [].constructor(3)">
+    <div class="playerstat" *ngFor="let player of [].constructor(7)">
         <div class="avatar"></div>
         <div class="stats">
           <div class="stat">
@@ -106,8 +106,8 @@
         </div>
 
 </section>
-<section [ngClass]="{tab:active==4,hidden:active!=4}">
-<div class="resultsbar">
+<section [ngClass]="{tab:active==4,hidden:active!=4}" class="mediacontainer">
+<div class="resultsbar mediaresult" >
  
     <select   formControlName="category" placeholder="select category">
         <optgroup>
@@ -120,7 +120,7 @@
 
       </select>
 </div>
-<div class="media">
+<div class="media" *ngFor="let media of [].constructor(4)">
     <div class="overlay">
         <div class="results mtop">Thika kings 1-0 waves fc</div>
         <div class="results grounds">Thika YMCA grounds</div>

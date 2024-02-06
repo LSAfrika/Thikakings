@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { NavComponent } from '../../components/nav/nav.component';
 import { Router } from '@angular/router';
 import { NavigationService } from '../../services/navigation.service';
@@ -15,9 +15,21 @@ export class TeamstatsComponent {
 
   private router=inject(Router)
   private navi=inject(NavigationService)
+  // SW=window.innerWidth||0
+  // @HostListener('window:resize', ['$event']) onResize() {
+
+    
+  //   this.SW = window.innerWidth;
+   
+
+
+
+
+
+  // }
 
   seasons=['23/24','22/23']
-active=4
+active=1
   constructor(){
     this.navi.currentroute=this.router.url
 

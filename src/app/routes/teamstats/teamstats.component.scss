@@ -5,7 +5,7 @@
 .statsnav{
     @apply min-w-full flex justify-start items-center 
      overflow-x-scroll min-h-[50px] bg-teal-300/0
-     sm:justify-center
+     sm:justify-center z-[100]
      ;
     div{
         @apply min-w-[150px] text-center text-blue-600 h-[50px] 
@@ -26,11 +26,13 @@
     relative
       md:hidden;
 h1{
-    @apply font-semibold text-slate-900
+    @apply font-semibold mb-2 text-slate-900 sm:text-lg sm:text-center
 }
       .playerstat{
         @apply w-full min-h-[75px] mb-5 px-2 box-border
-        bg-white drop-shadow-lg flex justify-start items-center gap-2;
+        bg-white drop-shadow-lg flex justify-start items-center gap-2 mx-auto
+        sm:max-w-[450px]
+        ;
 
         .avatar{
             @apply min-w-[70px] min-h-[70px] bg-rose-700 rounded-full
@@ -38,7 +40,7 @@ h1{
         }
         .stats{
             @apply flex-grow min-h-[70px]
-             text-slate-900 font-semibold flex flex-col
+             text-slate-900 font-light flex flex-col
               justify-center items-start;
             .stat{
                 @apply  flex justify-start
@@ -49,18 +51,27 @@ h1{
 
 
       .resultsbar{
-        @apply min-w-full min-h-[50px] bg-orange-50
+        @apply w-full min-h-[50px] bg-orange-50
         justify-evenly items-center
         drop-shadow-lg
-        flex sticky top-[-0px] px-2;
+        flex sticky top-[-0px] px-2
+        mx-auto
+        z-50
+        sm:max-w-[500px]
+        ;
         select{
             @apply w-full h-[30px] bg-slate-50
         }
       }
-
+.mediaresult{
+    @apply sm:min-w-[calc(100vw-10%)]
+}
       .matches{
-        @apply  min-w-full min-h-[60px] bg-orange-50 my-2
-        justify-evenly flex-wrap items-center flex text-slate-950;
+        @apply  w-full min-h-[60px] bg-orange-50 my-2
+        justify-evenly flex-wrap items-center flex text-slate-950
+        mx-auto
+        sm:max-w-[500px]
+        ;
         .winner{
             @apply font-semibold
         }
@@ -85,7 +96,7 @@ h1{
         .overlay{
             @apply absolute top-0 left-0 right-0 bottom-0
             bg-black/60 flex-col justify-center flex
-          cursor-pointer
+          cursor-pointer z-40
             p-2
              ;
              .mtop{
@@ -103,4 +114,8 @@ h1{
              } 
         }
       }
+     
 }
+.mediacontainer{
+    @apply sm:flex-row sm:flex-wrap sm:flex md:hidden
+  }
