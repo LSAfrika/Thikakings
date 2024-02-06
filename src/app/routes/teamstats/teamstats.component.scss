@@ -1,0 +1,106 @@
+.main{
+    @apply w-full min-h-screen bg-slate-200 z-50 pt-[50px] fixed top-0 flex justify-start items-stretch flex-col
+}
+
+.statsnav{
+    @apply min-w-full flex justify-start items-center 
+     overflow-x-scroll min-h-[50px] bg-teal-300/0
+     sm:justify-center
+     ;
+    div{
+        @apply min-w-[150px] text-center text-blue-600 h-[50px] 
+        box-border pt-3 hover:bg-blue-600 hover:text-white
+        cursor-pointer
+        md:hidden
+    }
+
+    .activetab{
+        @apply border-b-blue-600 border-b-[5px] font-semibold
+    }
+}
+
+.tab{
+    @apply min-w-full overflow-y-scroll
+     fixed min-h-[calc(100vh-110px)]
+      max-h-[calc(100vh-110px)]  bottom-0 px-2 pt-0
+    relative
+      md:hidden;
+h1{
+    @apply font-semibold text-slate-900
+}
+      .playerstat{
+        @apply w-full min-h-[75px] mb-5 px-2 box-border
+        bg-white drop-shadow-lg flex justify-start items-center gap-2;
+
+        .avatar{
+            @apply min-w-[70px] min-h-[70px] bg-rose-700 rounded-full
+            bg-cover bg-center overflow-hidden
+        }
+        .stats{
+            @apply flex-grow min-h-[70px]
+             text-slate-900 font-semibold flex flex-col
+              justify-center items-start;
+            .stat{
+                @apply  flex justify-start
+                min-w-full  pl-5 gap-5
+            }
+        }
+      }
+
+
+      .resultsbar{
+        @apply min-w-full min-h-[50px] bg-orange-50
+        justify-evenly items-center
+        drop-shadow-lg
+        flex sticky top-[-0px] px-2;
+        select{
+            @apply w-full h-[30px] bg-slate-50
+        }
+      }
+
+      .matches{
+        @apply  min-w-full min-h-[60px] bg-orange-50 my-2
+        justify-evenly flex-wrap items-center flex text-slate-950;
+        .winner{
+            @apply font-semibold
+        }
+        .home{
+            @apply text-teal-600
+        }
+        .score{
+            @apply text-blue-600 text-lg
+        }
+        .team{
+            @apply font-normal
+        }
+        .location{
+            @apply block min-w-full font-light text-xs text-center
+        }
+      }
+
+
+      .media{
+        @apply w-full max-w-[300px] mx-auto min-h-[300px] rounded-md
+        bg-white drop-shadow-lg my-2 relative;
+        .overlay{
+            @apply absolute top-0 left-0 right-0 bottom-0
+            bg-black/60 flex-col justify-center flex
+          cursor-pointer
+            p-2
+             ;
+             .mtop{
+                @apply mt-auto
+             }
+             .results{
+                @apply text-lg font-semibold text-white
+             }
+             .grounds{
+                @apply font-normal italic text-base
+             }
+             .date{
+                @apply  italic text-xs text-white
+                font-semibold
+             } 
+        }
+      }
+}

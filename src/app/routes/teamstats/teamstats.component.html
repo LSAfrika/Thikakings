@@ -1,3 +1,134 @@
-<section class="w-full min-h-screen bg-slate-200 z-50 pt-[50px] fixed top-0">
-    <!-- <app-nav></app-nav> -->
+<section class="main">
+   <div class="statsnav ">
+    <div [ngClass]="{activetab:active==1}" (click)="activetab(1)">player stats</div>
+    <div [ngClass]="{activetab:active==2}" (click)="activetab(2)">Results</div>
+    <div [ngClass]="{activetab:active==3}" (click)="activetab(3)">upcoming fixtures</div>
+    <div [ngClass]="{activetab:active==4}" (click)="activetab(4)" >Media</div>
+
+   </div>
+
+<section [ngClass]="{tab:active==1,hidden:active!=1}" >
+
+    <h1>goalkeepers</h1>
+    <div class="playerstat" *ngFor="let player of [].constructor(3)">
+            <div class="avatar"></div>
+            <div class="stats">
+              <div class="stat">
+                  <span>njoro icy </span>
+        <span>goalkeeper</span></div>
+
+        <div class="stat">
+            <span>apps:10 </span>
+            <span>clean sheet(s):4</span></div>
+   
+
+</div>
+</div>
+    <h1>Defenders</h1>
+    <div class="playerstat" *ngFor="let player of [].constructor(3)">
+        <div class="avatar"></div>
+        <div class="stats">
+          <div class="stat">
+              <span>njoro icy </span>
+    <span>goalkeeper</span></div>
+
+    <div class="stat">
+        <span>apps:10 </span>
+        <span>clean sheet(s):4</span></div>
+
+
+</div>
+</div>
+    <h1>Midfielders</h1>
+    <div class="playerstat" *ngFor="let player of [].constructor(3)">
+        <div class="avatar"></div>
+        <div class="stats">
+          <div class="stat">
+              <span>njoro icy </span>
+    <span>goalkeeper</span></div>
+
+    <div class="stat">
+        <span>apps:10 </span>
+        <span>clean sheet(s):4</span></div>
+
+
+</div>
+</div>
+    <h1>Attackers</h1>
+    <div class="playerstat" *ngFor="let player of [].constructor(3)">
+        <div class="avatar"></div>
+        <div class="stats">
+          <div class="stat">
+              <span>njoro icy </span>
+    <span>goalkeeper</span></div>
+
+    <div class="stat">
+        <span>apps:10 </span>
+        <span>clean sheet(s):4</span></div>
+
+
+</div>
+</div>
+</section>
+<section [ngClass]="{tab:active==2,hidden:active!=2}" >
+<div class="resultsbar">
+<div>Home</div>
+<div>result</div>
+<div>Away</div>
+</div>
+<div class="results">
+    <div class="matches" *ngFor="let games of [].constructor(15)">
+
+        <div class="team home">Thika Kings</div>
+        <div class="score">1-1</div>
+        <div class="team">Terror Squad</div>
+        <div class="location">Thika ymca grounds - 02.12.2023</div>
+        
+    </div>
+</div>
+</section>
+<section [ngClass]="{tab:active==3,hidden:active!=3}" >
+
+    <div class="resultsbar">
+        <div>Home</div>
+        <div></div>
+        <div>Away</div>
+        </div>
+        <div class="results">
+            <div class="matches" *ngFor="let games of [].constructor(15)">
+        
+                <div class="team home">Thika Kings</div>
+                <div class="score">-</div>
+                <div class="team">Terror Squad</div>
+                <div class="location">Thika ymca grounds - 02.12.2023</div>
+                
+            </div>
+        </div>
+
+</section>
+<section [ngClass]="{tab:active==4,hidden:active!=4}">
+<div class="resultsbar">
+ 
+    <select   formControlName="category" placeholder="select category">
+        <optgroup>
+          <option  style="font-size: 18px; text-align: center;" *ngFor="let category of seasons"
+            value="{{category}}">season: {{category}}</option>
+       
+        </optgroup>
+ 
+
+
+      </select>
+</div>
+<div class="media">
+    <div class="overlay">
+        <div class="results mtop">Thika kings 1-0 waves fc</div>
+        <div class="results grounds">Thika YMCA grounds</div>
+        <div class="date">(02.12.2023)</div>
+    </div>
+</div>
+
+
+
+</section>
 </section>
