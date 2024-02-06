@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-team',
@@ -9,5 +10,13 @@ import { Component } from '@angular/core';
   styleUrl: './team.component.scss'
 })
 export class TeamComponent {
+
+  navi=inject(NavigationService)
+
+
+  closeteamview(){
+    this.navi.viewteam.set(false)
+
+  }
 
 }

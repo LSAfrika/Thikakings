@@ -1,20 +1,25 @@
 <nav class="nav">
-    <span>Thika Kings FC</span>
+    <span class="cursor-pointer" routerLink="/">Thika Kings FC</span>
 <svg (click)="openmobilemenu()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255 255 255);"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
 
 <div class="navmenu " [ngClass]="{opennav: mobilemenustate==1,closenav:mobilemenustate==2}">
   
-        <div (click)="navigate('hero')">Home</div>
-        <div (click)="navigate('team')">Team</div>
+       
+
+        <div (click)="navigate('team')">The Team</div>
         <div  (click)="navigate('management')">management</div>
         <div  (click)="navigate('contactus')">contact us</div>
+        <div  routerLink="/teamstats">Team news</div>
+
  
 </div>
     <ul>
-        <li (click)="navigationscroll('hero')">Home</li>
-        <li (click)="navigationscroll('team')">Team</li>
+
+        <li (click)="navigationscroll('team')">The Team</li>
         <li (click)="navigationscroll('management')">management</li>
-        <li (click)="navigationscroll('contactus')">Contactus</li>
+        <li (click)="navigationscroll('contactus')">Contact us</li>
+        <li class="teamnews" routerLink="/teamstats">Team News</li>
+
         <!-- <li >Team news</li> -->
     </ul>
 </nav>

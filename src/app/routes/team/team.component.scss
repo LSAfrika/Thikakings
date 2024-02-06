@@ -9,7 +9,7 @@ section{
 
 .nav{
     @apply w-full min-h-[100px] h-fit
-     p-2 flex justify-start
+     p-2 flex justify-start relative
      items-center gap-5 flex-row;
      .logo{
         @apply w-[75px] h-[75px] bg-pink-600;
@@ -63,7 +63,12 @@ section{
          }
     }
 
+   
+
 }
 
-
+.close{
+    @apply rotate-45 absolute top-1 right-1 cursor-pointer  min-w-[30px] min-h-[30px]
+     lg:right-[calc(100vw-90%)] lg:top-[50%] lg:translate-y-[-50%] lg:w-[40px] lg:h-[40px]
+  }
 

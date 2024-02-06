@@ -1,5 +1,5 @@
 nav{
-    @apply top-0 fixed min-h-[50px] bg-blue-600 w-full z-50 flex justify-start items-center text-white font-semibold text-sm
+    @apply top-0 fixed min-h-[50px] bg-blue-600 w-full z-[70] flex justify-start items-center text-white font-semibold text-sm
     px-2  drop-shadow-lg
 }
 
@@ -31,7 +31,12 @@ svg{
 ul{
     @apply ml-auto md:flex justify-center items-center gap-4 mr-2 hidden ;
     li{
-        @apply font-light text-lg hover:underline-offset-1 hover:underline hover:font-semibold cursor-pointer
+        @apply font-light text-lg hover:underline-offset-1  hover:font-semibold cursor-pointer
+    }
+
+    .teamnews{
+        @apply bg-white text-blue-600    px-2 py-1 rounded-sm text-center hover:bg-transparent
+        hover:text-white hover:border-2 hover:border-white hover:font-light
     }
 }
 

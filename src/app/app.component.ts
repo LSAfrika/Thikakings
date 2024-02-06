@@ -6,7 +6,7 @@ import { ManagementComponent } from './components/management/management.componen
 import { FooterComponent } from './components/footer/footer.component';
 import { TheteamComponent } from './components/theteam/theteam.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
-import { Location } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { NavigationService } from './services/navigation.service';
 import { Subject, takeUntil, tap } from 'rxjs';
 import { TeamComponent } from './routes/team/team.component';
@@ -22,7 +22,8 @@ import { TeamComponent } from './routes/team/team.component';
             ManagementComponent,
             FooterComponent,
             ContactusComponent,
-            TeamComponent
+            TeamComponent,
+            CommonModule
 
           ],
   templateUrl: './app.component.html',
@@ -31,8 +32,9 @@ import { TeamComponent } from './routes/team/team.component';
 export class AppComponent {
   title = 'Thikakings';
 
+
   location=inject(Location)
-  navi=inject(NavigationService)
+  public navi=inject(NavigationService)
   destroy$=new Subject<void>()
   constructor(){
 
@@ -41,13 +43,13 @@ export class AppComponent {
 
   ngAfterViewInit(){
 
-    console.log('view inintiated');
+    console.log('view inintiated',document);
     
     this.navi.currentlocation.pipe(
       tap(location=>{this.scrolltocontent(location),console.log('current location: ',location)}),
       takeUntil(this.destroy$)
 
-    ).subscribe()
+    ).subscribe(console.log)
   }
 
   ngOnDestroy(){
@@ -56,17 +58,22 @@ export class AppComponent {
   }
   scrolltocontent(location: string) {
     // this.scroller.scrollToAnchor("contacts");
-    if (location === 'home') { this.location.go('#home') }
-    if (location === 'about') { this.location.go('#about') }
-    if (location === 'services') { this.location.go('#services') }
-    if (location === 'portfolio') { this.location.go('#portfolio') }
-    if (location === 'contacts') {  this.location.go('#contacts')}
+    if (location === 'hero') { this.location.go('#hero') }
+    if (location === 'team') { this.location.go('#team') }
+    if (location === 'management  ') { this.location.go('#management') }
+    if (location === 'contactus') { this.location.go('#contactus') }
+    // if (location === 'contacts') {  this.location.go('#contacts')}
 
 
-    document.getElementById(location)?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest'
-    }); 
+  
+
+     document.getElementById(location)?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+      }); 
+   
   }
+
+ 
 }

@@ -5,7 +5,7 @@
 }
 .management{
     @apply min-h-screen w-full pb-5 bg-blue-600 flex justify-start items-center flex-col   max-h-fit relative
-    md:flex-row md:flex-wrap md:justify-center gap-4 md:items-start xl:px-[calc(100vw-90%)] overflow-hidden
+    md:flex-row md:flex-wrap md:justify-center gap-4 md:items-start xl:px-[calc(100vw-90%)] overflow-hidden xl:pb-[140px]
 }
 .titleholder{
     @apply w-full block text-center z-30 relative bg-blue-600 xl:mb-5 xl:bg-transparent;
@@ -19,28 +19,28 @@
 .member{
     @apply relative z-20 w-full max-w-[300px] mt-[50px]
       min-h-[150px] bg-slate-100 drop-shadow-md md:mt-[10px]
-    rounded-lg  xl:min-w-[500px] xl:min-h-[250px];
+    rounded-lg  xl:min-w-[400px] xl:min-h-[200px] xl:mt-[20px];
 
     .avatar{
         @apply w-[100px] h-[100px] rounded-full border-[10px]
         border-blue-600 top-[-40px] absolute bg-white left-[5%]
         translate-x-[-5%]
 
-        xl:w-[150px] xl:h-[150px]
+        xl:w-[100px] xl:h-[100px] xl:top-[-30px]
     }
     .title{
         @apply min-w-full min-h-[50px] bg-slate-100 pl-[130px] 
         text-slate-600 font-light text-base   rounded-lg pt-[10px]
-        xl:pl-[200px] xl:text-2xl
+        xl:pl-[150px] xl:text-xl
         ;
         span{
-            @apply text-lg text-blue-600 font-normal xl:text-3xl
+            @apply text-lg text-blue-600 font-normal xl:text-2xl
         }
         
     }
     .statement{
         @apply bg-red-400/0 pt-[20px] px-2 text-center text-ellipsis text-slate-800 font-light
-        text-[18px] italic xl:pt-[50px] xl:text-2xl
+        text-[18px] italic xl:pt-[10px] xl:text-xl
     }
 
 }

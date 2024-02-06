@@ -11,9 +11,10 @@ export class NavigationService {
 
   location=inject(Router)
 currentlocation= new BehaviorSubject<string>('hero')
-viewteam=signal(true)
+viewteam=signal(false)
 constructor() { 
 
+  console.log(this.viewteam());
   
 }
 }

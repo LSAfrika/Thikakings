@@ -1,5 +1,9 @@
 <section class="theteam">
 
+
+
+
+
     <div class="teamtitle">
 
         <h1>Meet the Team</h1>
@@ -8,6 +12,12 @@
 
 <h2>23/24 Div II roaster</h2>
 
+<h3>Goal Keepers</h3>
+<div class="team">
+
+    <div class="playeravatar" *ngFor="let player of [].constructor(3)"></div>
+<!-- <button class="viewteambtn">view defence</button> -->
+</div>
 <h3>Defenders</h3>
 <div class="team">
 
@@ -30,7 +40,7 @@
 
 </div>
 
-<div class="fullteam">View full team roaster</div>
+<div class="fullteam" (click)="viewfullteam()">View full team roaster</div>
 <!-- <div class="max-w-[90%]gap-x-[25px] bg-emerald-600 flex justify-center items-start max-h-[450px] rounded-md overflow-y-scroll p-2 flex-wrap gap-2">
     <div *ngFor="let item of [].constructor(20)" class="min-w-[100px] min-h-[100px] bg-purple-800 rounded-lg"></div>
    
