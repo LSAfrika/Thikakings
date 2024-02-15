@@ -13,7 +13,7 @@
 
  
 </div>
-    <ul>
+    <ul *ngIf="navi.disablenavlinks()==false">
 
         <li (click)="navigationscroll('team')">The Team</li>
         <li (click)="navigationscroll('management')">management</li>

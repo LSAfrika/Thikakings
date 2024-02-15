@@ -33,6 +33,13 @@ active=1
   constructor(){
     this.navi.currentroute=this.router.url
 
+    this.navi.disablenavlinks.set(true)
+
+  }
+
+  ngOnDestroy(){
+    this.navi.disablenavlinks.set(false)
+
   }
 
   activetab(select:number){

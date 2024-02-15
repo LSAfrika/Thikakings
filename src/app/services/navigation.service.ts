@@ -10,6 +10,7 @@ export class NavigationService {
 
 
   disablemobilemenu=false
+  disablenavlinks=signal(false)
   currentroute='/'
   location=inject(Router)
 currentlocation= new Subject<string>()
