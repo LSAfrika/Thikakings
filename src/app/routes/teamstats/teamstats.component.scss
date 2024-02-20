@@ -4,27 +4,27 @@
 
 .statsnav{
     @apply min-w-full flex justify-start items-center 
-     overflow-x-scroll min-h-[50px] bg-teal-300/0
-     sm:justify-center z-[100] md:hidden
+     overflow-x-scroll min-h-[55px] bg-blue-600 
+     sm:justify-center z-[100] lg:hidden
      ;
     div{
-        @apply min-w-[150px] text-center text-blue-600 h-[50px] 
-        box-border pt-3 hover:bg-blue-600 hover:text-white
-        cursor-pointer
-        md:hidden
+        @apply min-w-[150px] text-center text-white h-[50px] 
+        box-border pt-3 hover:font-semibold
+        cursor-pointer drop-shadow-lg mb-1
+        lg:hidden 
     }
 
     .activetab{
-        @apply border-b-blue-600 border-b-[5px] font-semibold
+        @apply border-b-white border-b-[5px] font-semibold
     }
 }
 
 .tab{
     @apply min-w-full overflow-y-scroll
      fixed min-h-[calc(100vh-110px)]
-      max-h-[calc(100vh-110px)]  bottom-0 px-2 pt-0
+      max-h-screen  bottom-0 px-2 pt-0
     relative
-      md:hidden;
+      lg:hidden;
 h1{
     @apply font-semibold mb-2 text-slate-900 sm:text-lg sm:text-center
 }
@@ -117,13 +117,34 @@ h1{
      
 }
 .mediacontainer{
-    @apply sm:flex-row sm:flex-wrap sm:flex md:hidden
+    @apply sm:flex-row sm:flex-wrap pb-[125px]
+    
+    sm:flex 
+    
+    lg:hidden
 }
 
 .desktopview{
-    @apply min-w-full min-h-screen bg-teal-500 hidden md:flex pt-[10px] justify-center items-start flex-wrap gap-5 px-2 *:overflow-y-scroll
+    @apply min-w-full h-screen  max-h-[calc(100vh-50px)] bg-pink-500 hidden
+      justify-center items-start  gap-5 px-2 relative flex-wrap overflow-y-scroll
+
+      lg:flex py-[10px]
+
+      xl:justify-center
 }
 
 .desktopviewtabs{
-    @apply w-full  max-w-[500px] bg-slate-100 rounded-sm drop-shadow-lg h-screen max-h-[calc(100vh-100px)] overflow-y-scroll flex-grow
+    @apply w-full flex-grow bg-slate-100 rounded-sm drop-shadow-lg h-screen 
+    max-h-[calc(100vh-100px)] overflow-y-scroll  
+
+    lg:max-w-[600px]
+    xl:max-w-[800px]
+}
+
+.sidenav{
+    @apply  w-full max-w-[400px] h-screen bg-teal-500 top-0 pt-[50px] left-0  max-h-[calc(100vh-100px)]
+}
+
+.medialg{
+    @apply flex-grow min-h-[calc(100vh-100px)] bg-emerald-500 w-full max-w-[1000px]
 }
