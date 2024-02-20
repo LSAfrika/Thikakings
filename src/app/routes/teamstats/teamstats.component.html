@@ -122,7 +122,7 @@
 
       </select>
 </div>
-<div class="media" *ngFor="let media of [].constructor(4)">
+<div class="media" *ngFor="let media of [].constructor(7)">
     <div class="overlay">
         <div class="results mtop">Thika kings 1-0 waves fc</div>
         <div class="results grounds">Thika YMCA grounds</div>
@@ -141,7 +141,10 @@
 
 <h1>goalkeepers</h1>
 <div class="sidenavplayerstat" *ngFor="let player of [].constructor(3)">
-        <div class="avatar"></div>
+    
+    <div class="overlay">view player profile</div>
+
+    <div class="avatar"></div>
         <div class="stats">
           <div class="stat">
               <span >njoro icy </span>
@@ -156,6 +159,7 @@
 </div>
 <h1>Defenders</h1>
 <div class="sidenavplayerstat" *ngFor="let player of [].constructor(7)">
+    <div class="overlay">view player profile</div>
     <div class="avatar"></div>
     <div class="stats">
       <div class="stat">
@@ -171,6 +175,7 @@
 </div>
 <h1>Midfielders</h1>
 <div class="sidenavplayerstat" *ngFor="let player of [].constructor(6)">
+    <div class="overlay">view player profile</div>
     <div class="avatar"></div>
     <div class="stats">
       <div class="stat">
@@ -186,6 +191,7 @@
 </div>
 <h1>Attackers</h1>
 <div class="sidenavplayerstat" *ngFor="let player of [].constructor(7)">
+    <div class="overlay"> view player profile</div>
     <div class="avatar"></div>
     <div class="stats">
       <div class="stat">
@@ -231,6 +237,18 @@
         </div>
 
     </div>
-    <div class="medialg"></div>
+    <div class="medialg">
+        <div class="desktopmedianav">
+
+            <h1>Team Media</h1>
+        </div>
+        <div class="media" *ngFor="let media of [].constructor(7)">
+            <div class="overlay">
+                <div class="results mtop">Thika kings 1-0 waves fc</div>
+                <div class="results grounds">Thika YMCA grounds</div>
+                <div class="date">(02.12.2023)</div>
+            </div>
+        </div>
+    </div>
 </section>
 </section>

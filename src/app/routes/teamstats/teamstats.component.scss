@@ -215,12 +215,22 @@ h1{
   
     .sidenavplayerstat{
         @apply w-full 
-        lg:max-w-[calc(400px-16px)] 
         min-h-[75px] mb-5 px-2 box-border
         bg-white drop-shadow-lg flex 
         justify-start items-center gap-2 mx-auto
         sm:max-w-[450px] 
+        lg:max-w-[calc(350px-8px)] 
+        xl:max-w-[calc(400px-16px)] 
+        cursor-pointer relative
+
         ;
+
+        .overlay{
+            @apply w-full min-h-[75px] absolute top-0 left-0 right-0
+            opacity-0
+            bottom-0 bg-white/80 cursor-pointer text-center pt-6
+            text-slate-950 font-semibold hover:opacity-100 drop-shadow-lg
+        }
 
         .avatar{
             @apply min-w-[70px] min-h-[70px] bg-rose-700 rounded-full
@@ -239,5 +249,45 @@ h1{
 }
 
 .medialg{
-    @apply flex-grow min-h-[calc(100vh-100px)]  bg-slate-50 drop-shadow-xl  w-full max-w-[1020px] xl:max-w-[1220px]
+    @apply flex-grow min-h-[calc(100vh-100px)] 
+     bg-slate-50 drop-shadow-xl
+       w-full max-w-[1020px] xl:max-w-[1270px] rounded-md
+       flex justify-center items-start pb-3 flex-wrap
+       gap-5
+       ;
+       .desktopmedianav{
+        @apply min-h-[50px]  bg-blue-600 
+        min-w-full block pt-2 pl-3 text-white 
+        font-semibold text-lg rounded-t-md
+       }
+       .media{
+        @apply w-full  rounded-md
+        bg-white drop-shadow-lg my-2 relative
+        
+        lg:min-h-[300px] 
+        lg:max-w-[300px] 
+        xl:min-h-[350px] 
+        xl:max-w-[350px] 
+        ;
+        .overlay{
+            @apply absolute top-0 left-0 right-0 bottom-0
+            bg-black/60 flex-col justify-center flex
+          cursor-pointer z-40
+            p-2
+             ;
+             .mtop{
+                @apply mt-auto
+             }
+             .results{
+                @apply text-lg font-semibold text-white
+             }
+             .grounds{
+                @apply font-normal italic text-base
+             }
+             .date{
+                @apply  italic text-xs text-white
+                font-semibold
+             } 
+        }
+      }
 }

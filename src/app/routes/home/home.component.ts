@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule,Location } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ContactusComponent } from '../../components/contactus/contactus.component';
 import { FooterComponent } from '../../components/footer/footer.component';
