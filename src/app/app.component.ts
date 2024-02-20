@@ -16,14 +16,7 @@ import { TeamComponent } from './routes/team/team.component';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,
-            NavComponent,
-            HeroComponent,
-            TheteamComponent,
-            ManagementComponent,
-            FooterComponent,
-            ContactusComponent,
-            TeamComponent,
-            CommonModule
+        
 
           ],
   templateUrl: './app.component.html',

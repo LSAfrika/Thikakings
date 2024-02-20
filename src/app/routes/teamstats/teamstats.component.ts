@@ -7,7 +7,9 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-teamstats',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,
+    NavComponent
+  ],
   templateUrl: './teamstats.component.html',
   styleUrl: './teamstats.component.scss'
 })

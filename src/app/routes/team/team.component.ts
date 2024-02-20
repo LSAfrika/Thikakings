@@ -1,11 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { NavigationService } from '../../services/navigation.service';
+import { NavComponent } from '../../components/nav/nav.component';
 
 @Component({
   selector: 'app-team',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,
+    
+  
+  ],
   templateUrl: './team.component.html',
   styleUrl: './team.component.scss'
 })
