@@ -133,25 +133,80 @@ h1{
       xl:justify-center
 }
 
-.desktopviewtabs{
+.Matchstatsdesktop{
     @apply w-full flex-grow bg-slate-50 rounded-sm drop-shadow-xl h-screen 
-    max-h-[calc(100vh-100px)] overflow-y-scroll  
+    max-h-[calc(100vh-100px)] overflow-y-hidden  flex
+    flex-wrap justify-center  relative
 
-    lg:max-w-[600px]
-    xl:max-w-[800px]
+    lg:max-w-[650px]
+    xl:max-w-[850px];
+    .matchtabs{
+        @apply w-full min-h-[50px]  flex
+        justify-center mb-1 sticky top-0 bg-blue-600 drop-shadow-lg
+        ;
+        .tabs{  
+            @apply  text-white min-h-[50px]
+            min-w-[50%] text-center pt-3 mt-1 text-lg
+            uppercase 
+        }
+        .tabs:nth-child(1){
+            @apply border-r-2 border-white/30
+            
+        }
+        .tabs:nth-child(2){
+            @apply border-l-2 border-white/30
+        }
+    }
+    .matchdetails{
+        @apply w-full h-full
+        max-h-[calc(100vh-120px)] overflow-y-scroll
+        lg:max-w-[325px]
+        xl:max-w-[425px] pb-[100px];
+        .matches{
+            @apply  w-full min-h-[60px] bg-orange-50 my-2
+            justify-evenly flex-wrap items-center flex text-slate-950
+            mx-auto
+            sm:max-w-[500px]
+            ;
+            .winner{
+                @apply font-semibold
+            }
+            .home{
+                @apply text-teal-600
+            }
+            .score{
+                @apply text-blue-600 text-lg
+            }
+            .team{
+                @apply font-normal
+            }
+            .location{
+                @apply block min-w-full font-light text-xs text-center
+            }
+          }
+    
+    }
+    .matchdetails:nth-child(3){
+        @apply border-l-2 border-l-slate-300
+    }
+    .matchdetails:nth-child(2){
+        @apply border-r-2 border-r-slate-300
+    }
+
+    
 }
 
 .sidenav{
-    @apply  w-full max-w-[400px] h-screen
+    @apply  w-full max-w-[350px] xl:max-w-[400px] h-screen
      bg-slate-50 drop-shadow-xl   max-h-[calc(100vh-100px)]
     flex justify-start flex-col items-stretch 
-    overflow-y-scroll relative pt-[55px]
+    overflow-y-scroll relative 
     ;
     position: relative !important;
     .header{
         @apply min-h-[50px] bg-blue-600 w-full
         text-lg font-semibold text-white text-left px-2
-        pt-2 absolute top-0
+        pt-2 sticky top-0 z-50
        
     }
     h1{

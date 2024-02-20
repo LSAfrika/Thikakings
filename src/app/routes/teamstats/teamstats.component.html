@@ -136,7 +136,7 @@
 
 <section class="desktopview">
 
-    <div class="sidenav">
+<div class="sidenav">
 <div class="header">23/24 player stats</div>
 
 <h1>goalkeepers</h1>
@@ -144,8 +144,8 @@
         <div class="avatar"></div>
         <div class="stats">
           <div class="stat">
-              <span>njoro icy </span>
-    <span>goalkeeper</span></div>
+              <span >njoro icy </span>
+    <span class="text-blue-700 font-semibold ml-auto mr-1">GK</span></div>
 
     <div class="stat">
         <span>apps:10 </span>
@@ -159,8 +159,8 @@
     <div class="avatar"></div>
     <div class="stats">
       <div class="stat">
-          <span>njoro icy </span>
-<span>goalkeeper</span></div>
+          <span>johnston gathiang </span>
+<span class="text-blue-700 font-semibold ml-auto mr-1">AMF</span></div>
 
 <div class="stat">
     <span>apps:10 </span>
@@ -175,7 +175,7 @@
     <div class="stats">
       <div class="stat">
           <span>njoro icy </span>
-<span>goalkeeper</span></div>
+<span class="text-blue-700 font-semibold ml-auto mr-1">CMF</span></div>
 
 <div class="stat">
     <span>apps:10 </span>
@@ -190,7 +190,7 @@
     <div class="stats">
       <div class="stat">
           <span>njoro icy </span>
-<span>goalkeeper</span></div>
+<span  class="text-blue-600 font-semibold ml-auto mr-1" >CF</span></div>
 
 <div class="stat">
     <span>apps:10 </span>
@@ -200,9 +200,37 @@
 </div>
 </div>
 
-    </div>
+ </div>
     <!-- <div class="desktopviewtabs"></div> -->
-    <div class="desktopviewtabs"></div>
+    <div class="Matchstatsdesktop">
+        <div class="matchtabs">
+<div class="tabs">results</div>
+<div class="tabs">upcomig fixtures</div>
+
+        </div>
+
+        <div class="matchdetails">
+            <div class="matches" *ngFor="let games of [].constructor(15)">
+
+                <div class="team home">Thika Kings</div>
+                <div class="score">1-1</div>
+                <div class="team">Terror Squad</div>
+                <div class="location">Thika ymca grounds - 02.12.2023</div>
+                
+            </div>
+        </div>
+        <div class="matchdetails">
+            <div class="matches" *ngFor="let games of [].constructor(15)">
+        
+                <div class="team home">Thika Kings</div>
+                <div class="score">-</div>
+                <div class="team">Terror Squad</div>
+                <div class="location">Thika ymca grounds - 02.12.2023</div>
+                
+            </div>
+        </div>
+
+    </div>
     <div class="medialg"></div>
 </section>
 </section>
