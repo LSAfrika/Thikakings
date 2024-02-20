@@ -125,7 +125,7 @@ h1{
 }
 
 .desktopview{
-    @apply min-w-full h-screen  max-h-[calc(100vh-50px)] bg-pink-500 hidden
+    @apply min-w-full h-screen  max-h-[calc(100vh-50px)] bg-slate-200 hidden
       justify-center items-start  gap-5 px-2 relative flex-wrap overflow-y-scroll
 
       lg:flex py-[10px]
@@ -134,7 +134,7 @@ h1{
 }
 
 .desktopviewtabs{
-    @apply w-full flex-grow bg-slate-100 rounded-sm drop-shadow-lg h-screen 
+    @apply w-full flex-grow bg-slate-50 rounded-sm drop-shadow-xl h-screen 
     max-h-[calc(100vh-100px)] overflow-y-scroll  
 
     lg:max-w-[600px]
@@ -142,9 +142,47 @@ h1{
 }
 
 .sidenav{
-    @apply  w-full max-w-[400px] h-screen bg-teal-500 top-0 pt-[50px] left-0  max-h-[calc(100vh-100px)]
+    @apply  w-full max-w-[400px] h-screen
+     bg-slate-50 drop-shadow-xl   max-h-[calc(100vh-100px)]
+    flex justify-start flex-col items-stretch 
+    overflow-y-scroll relative pt-[55px]
+    ;
+    position: relative !important;
+    .header{
+        @apply min-h-[50px] bg-blue-600 w-full
+        text-lg font-semibold text-white text-left px-2
+        pt-2 absolute top-0
+       
+    }
+    h1{
+        @apply pl-2 my-2 text-blue-600
+    }
+  
+    .sidenavplayerstat{
+        @apply w-full 
+        lg:max-w-[calc(400px-16px)] 
+        min-h-[75px] mb-5 px-2 box-border
+        bg-white drop-shadow-lg flex 
+        justify-start items-center gap-2 mx-auto
+        sm:max-w-[450px] 
+        ;
+
+        .avatar{
+            @apply min-w-[70px] min-h-[70px] bg-rose-700 rounded-full
+            bg-cover bg-center overflow-hidden
+        }
+        .stats{
+            @apply flex-grow min-h-[70px]
+             text-slate-900 font-light flex flex-col
+              justify-center items-start;
+            .stat{
+                @apply  flex justify-start
+                min-w-full  pl-5 gap-5
+            }
+        }
+      }
 }
 
 .medialg{
-    @apply flex-grow min-h-[calc(100vh-100px)] bg-emerald-500 w-full max-w-[1000px]
+    @apply flex-grow min-h-[calc(100vh-100px)]  bg-slate-50 drop-shadow-xl  w-full max-w-[1020px] xl:max-w-[1220px]
 }
