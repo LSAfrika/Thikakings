@@ -33,6 +33,12 @@ h1{
         bg-white drop-shadow-lg flex justify-start items-center gap-2 mx-auto
         sm:max-w-[450px]
         ;
+        .overlay{
+            @apply w-full min-h-[75px] absolute top-0 left-0 right-0
+            opacity-0
+            bottom-0 bg-white/80 cursor-pointer text-center pt-6
+            text-slate-950 font-semibold hover:opacity-100 drop-shadow-xl
+        }
 
         .avatar{
             @apply min-w-[70px] min-h-[70px] bg-rose-700 rounded-full
@@ -228,8 +234,8 @@ h1{
         .overlay{
             @apply w-full min-h-[75px] absolute top-0 left-0 right-0
             opacity-0
-            bottom-0 bg-white/80 cursor-pointer text-center pt-6
-            text-slate-950 font-semibold hover:opacity-100 drop-shadow-lg
+            bottom-0 bg-white/90 cursor-pointer text-center pt-6
+            text-slate-950 font-semibold hover:opacity-100 drop-shadow-xl
         }
 
         .avatar{

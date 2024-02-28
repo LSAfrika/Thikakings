@@ -1,23 +1,22 @@
 <section >
 <div class="nav">
 
-<div class="logo"></div> 
-<div class="teamname">Thika kings 23/24 season</div>
+    <div class="teamnav min-w-full flex flex-wrap pt-5">
+        
+        <div class="teamname lg:text-3xl block w-full">MEET THE TEAM</div>
+        <div class="teamname">Thika kings 23/24 season</div>
 
-<svg (click)="closeteamview()" class="close" xmlns="http://www.w3.org/2000/svg"
-width="24" height="24" viewBox="0 0 24 24"
-style="fill: rgba(37 99 235)">
-<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"></path>
-</svg>
+    </div>
+
+
 
 </div>
 
 
 <div *ngFor="let card of [].constructor(24) let i=index" class="card">
-    <!-- <div class="sectiontitle" *ngIf="i==0">Goal keepers</div>
-    <div class="sectiontitle" *ngIf="i==3">Defenders</div>
-    <div class="sectiontitle" *ngIf="i==12">Midfielders</div>
-    <div class="sectiontitle" *ngIf="i==19">Forwards</div> -->
+<div class="overlay" (click)="openuserprofile()">
+    <span>view profile</span>
+</div>
 <div class="bio ">
     <div class="bioicon"></div>
     <span class="name"> peter njoroge</span>
@@ -32,4 +31,25 @@ style="fill: rgba(37 99 235)">
    
 </div>
 
+
+<div class="playerprofile" *ngIf="ui.openprofile()">
+
+    <div class="panel">
+        <div class="img"></div>
+        <!-- <div class="profileheading">player profile</div> -->
+        <div class="playerstats"><div>name</div> jeremy doku</div>
+        <div class="playerstats"><div>position</div> CF</div>
+        <div class="playerstats"><div>age</div> 23yrs </div>
+        <div class="playerstats"><div>foot</div> right </div>
+        <div class="playerstats"><div>height</div> 6ft 3"</div>
+        <div class="playerstats mt-auto mb-3">
+
+            <button (click)="closeuserprofile()" >close</button>
+        </div>
+
+
+
+    </div>
+
+</div>
 </section>

@@ -17,6 +17,7 @@ import { NavigationService } from '../../services/navigation.service';
     NavComponent,
     HeroComponent,
     TheteamComponent,
+    TeamComponent,
     ManagementComponent,
     FooterComponent,
     ContactusComponent,
