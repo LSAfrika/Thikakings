@@ -32,24 +32,5 @@
 </div>
 
 
-<div class="playerprofile" *ngIf="ui.openprofile()">
-
-    <div class="panel">
-        <div class="img"></div>
-        <!-- <div class="profileheading">player profile</div> -->
-        <div class="playerstats"><div>name</div> jeremy doku</div>
-        <div class="playerstats"><div>position</div> CF</div>
-        <div class="playerstats"><div>age</div> 23yrs </div>
-        <div class="playerstats"><div>foot</div> right </div>
-        <div class="playerstats"><div>height</div> 6ft 3"</div>
-        <div class="playerstats mt-auto mb-3">
-
-            <button (click)="closeuserprofile()" >close</button>
-        </div>
-
-
-
-    </div>
-
-</div>
+<app-playerprofile *ngIf="ui.openprofile()"></app-playerprofile>
 </section>
