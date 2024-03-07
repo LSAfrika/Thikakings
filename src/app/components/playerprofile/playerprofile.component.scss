@@ -5,29 +5,40 @@
          justify-start items-center bg-white drop-shadow-lg rounded-md relative
          sm:max-w-[450px] md:flex-row md:max-w-[700px] lg:max-w-[950px]
          ;
-        .img{
-            @apply w-full min-h-[300px] bg-teal-500 md:max-w-[300px] md:min-h-[80vh] lg:max-w-[400px]
+        .imgprofile{
+            @apply w-full min-h-[300px] bg-slate-300 md:hidden md:max-w-[300px] md:min-h-[80vh] rounded-t-md lg:max-w-[400px]
+        }
+
+        .imgfull{
+            @apply w-full bg-slate-300 hidden md:block max-w-[300px] min-h-[80vh] lg:max-w-[400px] rounded-l-md
         }
         // .profileheading{
         //     @apply min-w-[150px] min-h-[50px] rounded-r-full bg-red-400 pt-2 pl-2 mr-auto -translate-y-10
         // }
 
         .statsholder{
-            @apply w-full md:w-[395px] md:justify-center lg:w-[550px] md:min-h-[80vh]  flex-grow flex justify-start items-start
-            flex-col
+            @apply w-full md:w-[395px] md:pt-[100px] lg:w-[550px]  flex-grow flex justify-start items-start
+            flex-col min-h-[80vh] relative;
+            .title{
+                    @apply  font-semibold text-lg absolute top-0 bg-blue-600 w-full rounded-tr-md min-h-[50px] text-white flex
+                    justify-start items-center gap-2 p-2;
+                    .logo{
+                        @apply w-[50px] h-[50px] bg-green-500 rounded-full bg-cover bg-center overflow-hidden drop-shadow-xl
+                    }
+            }
         }
      
         .playerstats{
             @apply min-w-full min-h-[30px] px-2 flex justify-start items-center 
-            md:min-h-[50px] md:text-lg lg:text-2xl  lg:font-light  md:pl-[50px]
+            md:min-h-[50px] md:text-lg lg:text-2xl  lg:font-light  md:pl-[50px] 
             ;
             div{
-                @apply text-blue-600 pl-5 min-w-[100px]
+                @apply text-blue-600 pl-5 min-w-[150px]
             }
             button{
                 @apply mx-auto min-w-[150px] min-h-[35px] text-white font-semibold rounded-full bg-blue-600 md:min-w-[250px]
                 md:min-h-[50px]
-                lg:font-light
+                lg:font-light lg:mr-auto lg:ml-[100px]
                
             }
         }
