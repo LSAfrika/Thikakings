@@ -1,5 +1,6 @@
 .hero{
     @apply min-h-screen relative pt-[55px] bg-blue-600 flex flex-col justify-start items-center w-full overflow-hidden
+     lg:flex-row lg:justify-center lg:gap-5
 }
 
 
@@ -8,3 +9,7 @@
      bg-slate-200 rounded-full
       right-[-700px] md:right-[-700px] top-[100px] z-10
       md:min-h-[1200px] md:min-w-[1200px] xl:hidden}
+
+      .box{
+        @apply min-w-[200vw] min-h-[200vh] hidden bg-slate-200 absolute xl:block left-[25%] rotate-[-60deg]
+      }

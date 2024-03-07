@@ -19,13 +19,14 @@
      
         .playerstats{
             @apply min-w-full min-h-[30px] px-2 flex justify-start items-center 
-            md:min-h-[50px] md:text-lg lg:text-2xl  lg:font-light  md:pl-5
+            md:min-h-[50px] md:text-lg lg:text-2xl  lg:font-light  md:pl-[50px]
             ;
             div{
                 @apply text-blue-600 mr-2 min-w-[100px]
             }
             button{
-                @apply mx-auto min-w-[150px] min-h-[35px] text-white font-semibold rounded-full bg-blue-600 md:mx-0
+                @apply mx-auto min-w-[150px] min-h-[35px] text-white font-semibold rounded-full bg-blue-600 md:min-w-[250px]
+                md:min-h-[50px]
                 lg:font-light
                
             }
