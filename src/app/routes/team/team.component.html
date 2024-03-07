@@ -13,20 +13,20 @@
 </div>
 
 
-<div *ngFor="let card of [].constructor(24) let i=index" class="card">
-<div class="overlay" (click)="openuserprofile()">
+<div *ngFor="let player of playerdata.playerprofiles; let i=index" class="card">
+<div class="overlay" (click)="openuserprofile(player)">
     <span>view profile</span>
 </div>
 <div class="bio ">
     <div class="bioicon"></div>
-    <span class="name"> peter njoroge</span>
-    <span class="age"> age:23 </span>
+    <span class="name"> {{player.playername}}</span>
+    <span class="age"> age:{{player.age}} </span>
 </div>
 <div class="stats ">
 
-    <span class="stat ">position: <span class="text-slate-950">Gk</span> </span>
-    <span class="stat ">foot: <span class="text-slate-950">right</span></span>
-    <span class="stat ">height: <span class="text-slate-950">6ft 2"</span></span>
+    <span class="stat ">position: <span class="text-slate-950">{{player.position}}</span> </span>
+    <span class="stat ">foot: <span class="text-slate-950">{{player.foot}}</span></span>
+    <span class="stat ">height: <span class="text-slate-950">{{player.height}}</span></span>
 </div>
    
 </div>

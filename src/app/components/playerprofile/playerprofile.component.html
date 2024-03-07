@@ -5,11 +5,22 @@
         <!-- <div class="profileheading">player profile</div> -->
         <div class="statsholder">
 
-            <div class="playerstats"><div>name</div> jeremy doku</div>
-            <div class="playerstats"><div>position</div> CF</div>
-            <div class="playerstats"><div>age</div> 23yrs </div>
-            <div class="playerstats"><div>foot</div> right </div>
-            <div class="playerstats"><div>height</div> 6ft 3"</div>
+            <div class="playerstats"><div>name</div> {{playerdata.player.playername}}</div>
+            <div class="playerstats"><div>position</div> {{playerdata.player.position}}</div>
+            <div class="playerstats"><div>age</div> {{playerdata.player.age}} </div>
+            <div class="playerstats"><div>foot</div> {{playerdata.player.foot}} </div>
+            <div class="playerstats"><div>height</div> {{playerdata.player.height}}</div>
+            <div class="playerstats"><div>apps</div> {{playerdata.player.app}} </div>
+            <div class="playerstats"><div>subs</div> {{playerdata.player.sub}} </div>
+            <ng-container *ngIf="playerdata.player.position!='GK'" >
+                <div  class="playerstats"><div>Goals</div> {{playerdata.player.goals}}</div>
+                <div class="playerstats"><div>Assists</div> {{playerdata.player.assists}}</div>
+            </ng-container>
+            <ng-container *ngIf="playerdata.player.position=='GK'" >
+                <div *ngIf="playerdata.player.position=='GK'" class="playerstats"><div>cleansheet(s)</div> {{playerdata.player.height}}</div>
+            </ng-container>
+
+
             <div class="playerstats mt-auto mb-3 md:mt-5">
     
                 <button (click)="closeuserprofile()" >close</button>

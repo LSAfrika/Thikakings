@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { UiService } from '../../service/ui.service';
+import { PlayerdataService } from '../../services/playerdata.service';
 
 @Component({
   selector: 'app-playerprofile',
@@ -11,6 +12,7 @@ import { UiService } from '../../service/ui.service';
 })
 export class PlayerprofileComponent {
 public ui=inject(UiService)
+public playerdata=inject(PlayerdataService)
 
 
 closeuserprofile(){

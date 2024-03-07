@@ -4,26 +4,45 @@ import { CommonModule, Location } from '@angular/common';
 import { NavigationService } from './services/navigation.service';
 import { Subject, takeUntil, tap } from 'rxjs';
 import { TeamComponent } from './routes/team/team.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+// import { initializeApp } from "firebase/app";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,
-        
-
-          ],
+    
+                 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'Thikakings';
 
-
+  http=inject(HttpClient)
   location=inject(Location)
   public navi=inject(NavigationService)
   destroy$=new Subject<void>()
+ 
+
+
+// Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAvmLopAxS_AdJVipbI0Jtnm8NAiiWFTTw",
+//   authDomain: "thikakingss.firebaseapp.com",
+//   projectId: "thikakingss",
+//   storageBucket: "thikakingss.appspot.com",
+//   messagingSenderId: "362531708804",
+//   appId: "1:362531708804:web:55d07ea238697159e007d1"
+// };
+
+// Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+
+
   constructor(){
+
 
 
   }

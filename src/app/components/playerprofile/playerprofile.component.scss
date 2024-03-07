@@ -22,7 +22,7 @@
             md:min-h-[50px] md:text-lg lg:text-2xl  lg:font-light  md:pl-[50px]
             ;
             div{
-                @apply text-blue-600 mr-2 min-w-[100px]
+                @apply text-blue-600 pl-5 min-w-[100px]
             }
             button{
                 @apply mx-auto min-w-[150px] min-h-[35px] text-white font-semibold rounded-full bg-blue-600 md:min-w-[250px]

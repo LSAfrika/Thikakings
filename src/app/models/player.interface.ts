@@ -1,8 +1,13 @@
 export interface Player{
-    name:string
+    playername:string
+    age:number
     position:string
-    appearances:number
-    substitutions:number
+    height:number
+    profileimage:string
+    fullimage:string
+    app:number
+    sub:number
+    foot:string
     cleansheets?:number
     goals?:number
     assists?:number
