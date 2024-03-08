@@ -18,7 +18,8 @@
     <span>view profile</span>
 </div>
 <div class="bio ">
-    <div class="bioicon"></div>
+    <div class="bioicon"  [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+   
     <span class="name"> {{player.playername}}</span>
     <span class="age"> age:{{player.age}} </span>
 </div>
