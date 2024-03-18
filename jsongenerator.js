@@ -77,13 +77,13 @@ const playerstats=[
     
     
     
-    { playername:'Dickson "Ras" Asava',age:20,position:'DMF',height:1,
+    { playername:'Dickson "Ras" Asava',age:20,position:'CDM',height:1,
     profileimage:'https://firebasestorage.googleapis.com/v0/b/thikakingss.appspot.com/o/profile%2Fmbuvi%20profile.png?alt=media&token=be9f903c-b0c6-4e18-844d-10978495e5ee',
     fullimage:'https://firebasestorage.googleapis.com/v0/b/thikakingss.appspot.com/o/full%2Fmbuvi1.png?alt=media&token=a37721dc-1200-4dec-b43d-1ba34778b0be',
     goals:0, assists:0,cleansheet:0,app:0,sub:0,foot:'right'},
    
    
-    { playername:'Michael "Chopo" Mutyang`a',age:24,position:'DMF',height:1,
+    { playername:'Michael "Chopo" Mutyang`a',age:24,position:'CDM',height:1,
     profileimage:'https://firebasestorage.googleapis.com/v0/b/thikakingss.appspot.com/o/profile%2Fchoppo%20profile.png?alt=media&token=11d986cd-73a7-4a7a-9b44-27bcd5d31bfe',
     fullimage:'https://firebasestorage.googleapis.com/v0/b/thikakingss.appspot.com/o/full%2Fchopo1.png?alt=media&token=f5402a8f-dfa6-4e87-99a9-27e91f666e3f',
     goals:0, assists:0,cleansheet:0,app:0,sub:0,foot:'right'},

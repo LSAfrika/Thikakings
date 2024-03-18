@@ -12,5 +12,7 @@ player!:Player
   constructor() {
 
     this.playerprofiles=playerstats 
+    console.log(this.playerprofiles);
+    
    }
 }

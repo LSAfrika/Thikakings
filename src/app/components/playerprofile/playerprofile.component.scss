@@ -20,7 +20,7 @@
 
         .statsholder{
             @apply w-full md:w-[395px] md:pt-[100px] lg:w-[550px]  flex-grow flex justify-start items-start
-            flex-col min-h-fit lg:min-h-[80vh] relative;
+            flex-col min-h-fit lg:min-h-[85vh] relative;
             .title{
                     @apply hidden font-semibold text-lg absolute top-0 bg-blue-600 w-full rounded-tr-md min-h-[50px] text-white 
                     lg:flex

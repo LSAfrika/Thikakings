@@ -11,71 +11,170 @@
 
 <section [ngClass]="{tab:active==1,hidden:active!=1}" >
 
-    <h1>goalkeepers</h1>
-    <div class="playerstat" *ngFor="let player of [].constructor(3)">
-    <div class="overlay">view player profile</div>
-    <div class="avatar"></div>
+    <ng-container *ngFor="let player of playerdata.playerprofiles;let i=index" >
+   <!-- {{playerdata.playerprofiles|json}} -->
+    <h1 *ngIf="player.position=='GK'&&i==0">goalkeepers</h1>
+    <div class="playerstat" *ngIf="player.position=='GK'" >
+    <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+    <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
             <div class="stats">
               <div class="stat">
-                  <span>njoro icy </span>
-        <span>goalkeeper</span></div>
+                  <span>{{player.playername}} </span>
+        <span>{{player.position}}</span></div>
 
         <div class="stat">
-            <span>apps:10 </span>
-            <span>clean sheet(s):4</span></div>
+            <span>apps:{{player.app}} </span>
+            <span>clean sheet(s):{{player.cleansheet}}</span></div>
    
 
 </div>
 </div>
-    <h1>Defenders</h1>
-    <div class="playerstat" *ngFor="let player of [].constructor(7)">
-    <div class="overlay">view player profile</div>
-    <div class="avatar"></div>
-        <div class="stats">
-          <div class="stat">
-              <span>njoro icy </span>
-    <span>goalkeeper</span></div>
-
-    <div class="stat">
-        <span>apps:10 </span>
-        <span>clean sheet(s):4</span></div>
-
-
-</div>
-</div>
-    <h1>Midfielders</h1>
-    <div class="playerstat" *ngFor="let player of [].constructor(6)">
-    <div class="overlay">view player profile</div>
-    <div class="avatar"></div>
-        <div class="stats">
-          <div class="stat">
-              <span>njoro icy </span>
-    <span>goalkeeper</span></div>
-
-    <div class="stat">
-        <span>apps:10 </span>
-        <span>clean sheet(s):4</span></div>
-
-
-</div>
-</div>
-    <h1>Attackers</h1>
-    <div class="playerstat" *ngFor="let player of [].constructor(7)">
-    <div class="overlay">view player profile</div>
-      
-        <div class="avatar"></div>
-        <div class="stats">
-          <div class="stat">
-              <span>njoro icy </span>
-    <span>goalkeeper</span></div>
-
-    <div class="stat">
-        <span>apps:10 </span>
-        <span>clean sheet(s):4</span></div>
-
-
-</div>
-</div>
+    <h1 *ngIf="player.position=='LB'&&i==3">Defenders</h1>
+    <div class="playerstat" *ngIf="player.position=='LB'" >
+        <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+        <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                <div class="stats">
+                  <div class="stat">
+                      <span>{{player.playername}} </span>
+            <span >{{player.position}}</span></div>
+    
+            <div class="stat">
+                <span>apps:{{player.app}} </span>
+                <span>goals:{{player.goals}} </span>
+                <span>goals:{{player.assists}} </span>
+            </div>
+       
+    
+    </div>
+    </div>
+    <div class="playerstat" *ngIf="player.position=='CB'" >
+        <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+        <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                <div class="stats">
+                  <div class="stat">
+                      <span>{{player.playername}} </span>
+            <span>{{player.position}}</span></div>
+    
+            <div class="stat">
+                <span>apps:{{player.app}} </span>
+                <span>goals:{{player.goals}} </span>
+                <span>goals:{{player.assists}} </span>
+            </div>
+       
+    
+    </div>
+    </div>
+    <div class="playerstat" *ngIf="player.position=='RB'" >
+        <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+        <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                <div class="stats">
+                  <div class="stat">
+                      <span>{{player.playername}} </span>
+            <span>{{player.position}}</span></div>
+    
+            <div class="stat">
+                <span>apps:{{player.app}} </span>
+                <span>goals:{{player.goals}} </span>
+                <span>goals:{{player.assists}} </span>
+            </div>
+       
+    
+    </div>
+    </div>
+    <h1 *ngIf="player.position=='CDM'&&i==11">Midfielders</h1>
+    <div class="playerstat" *ngIf="player.position=='CDM'" >
+        <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+        <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                <div class="stats">
+                  <div class="stat">
+                      <span>{{player.playername}} </span>
+            <span>{{player.position}}</span></div>
+    
+            <div class="stat">
+                <span>apps:{{player.app}} </span>
+                <span>goals:{{player.goals}} </span>
+                <span>goals:{{player.assists}} </span>
+             
+            </div>
+       
+    
+    </div>
+    </div>
+  
+    <div class="playerstat" *ngIf="player.position=='AMF'" >
+        <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+        <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                <div class="stats">
+                  <div class="stat">
+                      <span>{{player.playername}} </span>
+            <span>{{player.position}}</span></div>
+    
+            <div class="stat">
+                <span>apps:{{player.app}} </span>
+                <span>goals:{{player.goals}} </span>
+                <span>goals:{{player.assists}} </span>
+             
+            </div>
+       
+    
+    </div>
+    </div>
+    <h1 *ngIf="player.position=='LWF'&&i==17">Attackers</h1>
+    <div class="playerstat" *ngIf="player.position=='LWF'" >
+        <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+        <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                <div class="stats">
+                  <div class="stat">
+                      <span>{{player.playername}} </span>
+            <span>{{player.position}}</span></div>
+    
+            <div class="stat">
+                <span>apps:{{player.app}} </span>
+                <span>goals:{{player.goals}} </span>
+                <span>goals:{{player.assists}} </span>
+             
+            </div>
+       
+    
+    </div>
+    </div>
+    <div class="playerstat" *ngIf="player.position=='RWF'" >
+        <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+        <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                <div class="stats">
+                  <div class="stat">
+                      <span>{{player.playername}} </span>
+            <span>{{player.position}}</span></div>
+    
+            <div class="stat">
+                <span>apps:{{player.app}} </span>
+                <span>goals:{{player.goals}} </span>
+                <span>goals:{{player.assists}} </span>
+             
+            </div>
+       
+    
+    </div>
+    </div>
+    <div class="playerstat" *ngIf="player.position=='CF'" >
+        <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+        <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                <div class="stats">
+                  <div class="stat">
+                      <span>{{player.playername}} </span>
+            <span>{{player.position}}</span></div>
+    
+            <div class="stat">
+                <span>apps:{{player.app}} </span>
+                <span>goals:{{player.goals}} </span>
+                <span>goals:{{player.assists}} </span>
+             
+            </div>
+       
+    
+    </div>
+    </div>
+</ng-container>
 </section>
 <section [ngClass]="{tab:active==2,hidden:active!=2}" >
 <div class="resultsbar">
@@ -144,79 +243,175 @@
 <div class="sidenav">
 <div class="header">23/24 player stats</div>
 
-<h1>goalkeepers</h1>
-<div class="sidenavplayerstat" *ngFor="let player of [].constructor(3)">
+<ng-container *ngFor="let player of playerdata.playerprofiles;let i=index" >
+    <!-- {{playerdata.playerprofiles|json}} -->
+     <h1 *ngIf="player.position=='GK'&&i==0">goalkeepers</h1>
+     <div class="sidenavplayerstat" *ngIf="player.position=='GK'" >
+     <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+     <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+             <div class="stats">
+               <div class="stat">
+                   <span>{{player.playername}} </span>
+         <div class="pos">{{player.position}}</div></div>
+ 
+         <div class="stat">
+             <span>apps:{{player.app}} </span>
+             <span>clean sheet(s):{{player.cleansheet}}</span></div>
     
-    <div class="overlay">view player profile</div>
-
-    <div class="avatar"></div>
-        <div class="stats">
-          <div class="stat">
-              <span >njoro icy </span>
-    <span class="text-blue-700 font-semibold ml-auto mr-1">GK</span></div>
-
-    <div class="stat">
-        <span>apps:10 </span>
-        <span>clean sheet(s):4</span></div>
-
-
-</div>
-</div>
-<h1>Defenders</h1>
-<div class="sidenavplayerstat" *ngFor="let player of [].constructor(7)">
-    <div class="overlay">view player profile</div>
-    <div class="avatar"></div>
-    <div class="stats">
-      <div class="stat">
-          <span>johnston gathiang </span>
-<span class="text-blue-700 font-semibold ml-auto mr-1">AMF</span></div>
-
-<div class="stat">
-    <span>apps:10 </span>
-    <span>clean sheet(s):4</span></div>
-
-
-</div>
-</div>
-<h1>Midfielders</h1>
-<div class="sidenavplayerstat" *ngFor="let player of [].constructor(6)">
-    <div class="overlay">view player profile</div>
-    <div class="avatar"></div>
-    <div class="stats">
-      <div class="stat">
-          <span>njoro icy </span>
-<span class="text-blue-700 font-semibold ml-auto mr-1">CMF</span></div>
-
-<div class="stat">
-    <span>apps:10 </span>
-    <span>clean sheet(s):4</span></div>
-
-
-</div>
-</div>
-<h1>Attackers</h1>
-<div class="sidenavplayerstat" *ngFor="let player of [].constructor(7)">
-    <div class="overlay"> view player profile</div>
-    <div class="avatar"></div>
-    <div class="stats">
-      <div class="stat">
-          <span>njoro icy </span>
-<span  class="text-blue-600 font-semibold ml-auto mr-1" >CF</span></div>
-
-<div class="stat">
-    <span>apps:10 </span>
-    <span>clean sheet(s):4</span></div>
-
-
-</div>
-</div>
-
+ 
  </div>
-    <!-- <div class="desktopviewtabs"></div> -->
+ </div>
+     <h1 *ngIf="player.position=='LB'&&i==3">Defenders</h1>
+     <div class="sidenavplayerstat" *ngIf="player.position=='LB'" >
+         <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+         <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                 <div class="stats">
+                   <div class="stat">
+                       <span>{{player.playername}} </span>
+             <div class="pos">{{player.position}}</div></div>
+     
+             <div class="stat">
+                 <span>apps:{{player.app}} </span>
+                 <span>goals:{{player.goals}} </span>
+                 <span>goals:{{player.assists}} </span>
+             </div>
+        
+     
+     </div>
+     </div>
+     <div class="sidenavplayerstat" *ngIf="player.position=='CB'" >
+         <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+         <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                 <div class="stats">
+                   <div class="stat">
+                       <span>{{player.playername}} </span>
+             <div class="pos">{{player.position}}</div></div>
+     
+             <div class="stat">
+                 <span>apps:{{player.app}} </span>
+                 <span>goals:{{player.goals}} </span>
+                 <span>goals:{{player.assists}} </span>
+             </div>
+        
+     
+     </div>
+     </div>
+     <div class="sidenavplayerstat" *ngIf="player.position=='RB'" >
+         <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+         <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                 <div class="stats">
+                   <div class="stat">
+                       <span>{{player.playername}} </span>
+             <div class="pos">{{player.position}}</div></div>
+     
+             <div class="stat">
+                 <span>apps:{{player.app}} </span>
+                 <span>goals:{{player.goals}} </span>
+                 <span>goals:{{player.assists}} </span>
+             </div>
+        
+     
+     </div>
+     </div>
+     <h1 *ngIf="player.position=='CDM'&&i==11">Midfielders</h1>
+     <div class="sidenavplayerstat" *ngIf="player.position=='CDM'" >
+         <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+         <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                 <div class="stats">
+                   <div class="stat">
+                       <span>{{player.playername}} </span>
+             <div class="pos">{{player.position}}</div></div>
+     
+             <div class="stat">
+                 <span>apps:{{player.app}} </span>
+                 <span>goals:{{player.goals}} </span>
+                 <span>goals:{{player.assists}} </span>
+              
+             </div>
+        
+     
+     </div>
+     </div>
+   
+     <div class="sidenavplayerstat" *ngIf="player.position=='AMF'" >
+         <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+         <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                 <div class="stats">
+                   <div class="stat">
+                       <span>{{player.playername}} </span>
+             <div class="pos">{{player.position}}</div></div>
+     
+             <div class="stat">
+                 <span>apps:{{player.app}} </span>
+                 <span>goals:{{player.goals}} </span>
+                 <span>goals:{{player.assists}} </span>
+              
+             </div>
+        
+     
+     </div>
+     </div>
+     <h1 *ngIf="player.position=='LWF'&&i==17">Attackers</h1>
+     <div class="sidenavplayerstat" *ngIf="player.position=='LWF'" >
+         <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+         <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                 <div class="stats">
+                   <div class="stat">
+                       <span>{{player.playername}} </span>
+             <div class="pos">{{player.position}}</div></div>
+     
+             <div class="stat">
+                 <span>apps:{{player.app}} </span>
+                 <span>goals:{{player.goals}} </span>
+                 <span>goals:{{player.assists}} </span>
+              
+             </div>
+        
+     
+     </div>
+     </div>
+     <div class="sidenavplayerstat" *ngIf="player.position=='RWF'" >
+         <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+         <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                 <div class="stats">
+                   <div class="stat">
+                       <span>{{player.playername}} </span>
+             <div class="pos">{{player.position}}</div></div>
+     
+             <div class="stat">
+                 <span>apps:{{player.app}} </span>
+                 <span>goals:{{player.goals}} </span>
+                 <span>goals:{{player.assists}} </span>
+              
+             </div>
+        
+     
+     </div>
+     </div>
+     <div class="sidenavplayerstat" *ngIf="player.position=='CF'" >
+         <div (click)="openplayerprofile(player)" class="overlay">view player profile</div>
+         <div class="avatar" [style]="{ 'background-image': 'url(' +player.profileimage + ')' }"></div>
+                 <div class="stats">
+                   <div class="stat">
+                       <span>{{player.playername}} </span>
+             <div class="pos">{{player.position}}</div></div>
+     
+             <div class="stat">
+                 <span>apps:{{player.app}} </span>
+                 <span>goals:{{player.goals}} </span>
+                 <span>goals:{{player.assists}} </span>
+              
+             </div>
+        
+     
+     </div>
+     </div>
+ </ng-container>
+</div>
     <div class="Matchstatsdesktop">
         <div class="matchtabs">
-<div class="tabs">results</div>
-<div class="tabs">upcomig fixtures</div>
+        <div class="tabs">results</div>
+        <div class="tabs">upcomig fixtures</div>
 
         </div>
 
@@ -255,5 +450,7 @@
             </div>
         </div>
     </div>
+
 </section>
-</section>
+
+<app-playerprofile *ngIf="ui.openprofile()"></app-playerprofile>

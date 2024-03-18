@@ -36,13 +36,13 @@ h1{
         .overlay{
             @apply w-full min-h-[75px] absolute top-0 left-0 right-0
             opacity-0
-            bottom-0 bg-white/80 cursor-pointer text-center pt-6
+            bottom-0 bg-white cursor-pointer text-center pt-6
             text-slate-950 font-semibold hover:opacity-100 drop-shadow-xl
         }
 
         .avatar{
-            @apply min-w-[70px] min-h-[70px] bg-rose-700 rounded-full
-            bg-cover bg-center overflow-hidden
+            @apply min-w-[70px] min-h-[70px] bg-slate-200 rounded-full
+            bg-cover bg-center overflow-hidden z-10
         }
         .stats{
             @apply flex-grow min-h-[70px]
@@ -221,7 +221,7 @@ h1{
   
     .sidenavplayerstat{
         @apply w-full 
-        min-h-[75px] mb-5 px-2 box-border
+        min-h-[100px] mb-5 px-2 box-border
         bg-white drop-shadow-lg flex 
         justify-start items-center gap-2 mx-auto
         sm:max-w-[450px] 
@@ -232,15 +232,15 @@ h1{
         ;
 
         .overlay{
-            @apply w-full min-h-[75px] absolute top-0 left-0 right-0
+            @apply w-full min-h-[100px] max-h-[100px] absolute top-0 left-0 right-0
             opacity-0
-            bottom-0 bg-white/90 cursor-pointer text-center pt-6
+            bottom-0 bg-white cursor-pointer text-center pt-10
             text-slate-950 font-semibold hover:opacity-100 drop-shadow-xl
         }
 
         .avatar{
-            @apply min-w-[70px] min-h-[70px] bg-rose-700 rounded-full
-            bg-cover bg-center overflow-hidden
+            @apply min-w-[70px] min-h-[70px] max-w-[70px] max-h-[70px] bg-slate-200 rounded-full
+            bg-cover bg-center overflow-hidden drop-shadow-lg
         }
         .stats{
             @apply flex-grow min-h-[70px]
@@ -248,7 +248,10 @@ h1{
               justify-center items-start;
             .stat{
                 @apply  flex justify-start
-                min-w-full  pl-5 gap-5
+                min-w-full  pl-5 gap-5;
+                .pos{
+                    @apply font-semibold text-blue-600  ml-auto
+                }
             }
         }
       }
