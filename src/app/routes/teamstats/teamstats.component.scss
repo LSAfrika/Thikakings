@@ -55,6 +55,9 @@ h1{
         }
       }
 
+      .playerstat:last-child{
+        @apply mb-[125px]
+      }
 
       .resultsbar{
         @apply w-full min-h-[50px] bg-orange-50
@@ -95,6 +98,9 @@ h1{
         }
       }
 
+      .matches:last-child{
+        @apply mb-[125px]
+      }
 
       .media{
         @apply w-full max-w-[300px] mx-auto min-h-[300px] rounded-md
@@ -255,6 +261,10 @@ h1{
             }
         }
       }
+
+      .sidenavplayerstat:last-child{
+        @apply mb-[125px]
+      }
 }
 
 .medialg{
@@ -288,7 +298,7 @@ h1{
                 @apply mt-auto
              }
              .results{
-                @apply text-lg font-semibold text-white
+                @apply text-lg font-semibold text-white 
              }
              .grounds{
                 @apply font-normal italic text-base
